@@ -125,71 +125,59 @@ Key Insights:
 
 **2. Fraud Timing (Signup → Purchase)**
 
-- Highest fraud occurs within the first hour of signup
-
-- Legit: 574 | Fraud: 7,630
-
-- Fraud probability starts dropping from Day 2
-
-- A 12-day high-risk window exists post-signup
-
-- Fraud declines significantly after 4 months
-
-Insight: Immediate post-signup activity is the strongest fraud indicator.
-
-The chart shows fraudulent transactions by signup-to-purchase time (datediff in days), with an overwhelming concentration at Day 0 (same-day purchase). Fraud volume drops sharply after Day 0 and remains very low and flat across Days 1–24, indicating that delayed purchases are far less risky.
+Fraudulent transactions by signup-to-purchase time (datediff in days) shows an overwhelming concentration at **Day 0** (same-day purchase). Fraud volume drops sharply after and remains very low across days 1–24, indicating that delayed purchases are far less risky.
 
 This steep fall-off highlights that fraudsters act immediately after account creation, while genuine users tend to purchase after some delay. The distribution clearly separates high-risk instant conversions from lower-risk delayed behavior.
 
-Key Insights (Points with % metrics):
+**Key Insights:**
 
-~75–80% of total fraud occurs on Day 0 (within the first 24 hours of signup).
+- **~75–80%** of total fraud occurs on Day 0 (within the first 24 hours of signup),  Legit: 574 | Fraud: 7,630.
 
-Fraud drops by >90% from Day 1 onward, indicating a strong time-based risk signal.
+- Fraud drops by >90% from Day 1 onward, indicating a strong time-based risk signal.
 
-Days 1–12 collectively contribute <15% of fraud, forming a diminishing high-risk window.
+- Days 1–12 collectively contribute <15% of fraud, forming a diminishing high-risk window.
 
-Beyond Day 12, fraud contribution is negligible (<5%).
+- Beyond Day 12, fraud contribution is negligible (<5%).
 
-Implementing stricter checks for same-day purchases (rate limits, step-up verification) can address the majority of fraud with minimal impact on genuine users.
+- Implementing stricter checks for same-day purchases (rate limits, step-up verification) can address the majority of fraud with minimal impact on genuine users.
 
 ![Fraud Timing](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_datediff.jpg)
 
 **3. Fraud By Day**
 
-The chart shows fraudulent signups by day of the month, with very high fraud volumes during the first half (Days 1–12), peaking close to ~1,000 fraud cases per day. This indicates intense fraudulent account creation early in the signup cycle.
+With very high fraud volumes during the first half (Days 1–12), fraudulent signups by day of the month, peaks close to **~1,000** fraud cases per day. This indicates intense fraudulent account creation early in the signup cycle.
 
 After Day 12, fraud drops sharply to nearly one-third of the earlier levels and then stabilizes between 150–250 cases per day toward the end of the month. The downward trend suggests that fraudsters are heavily concentrated in early-period signup activity.
 
 Key Insights (Points):
 
-Days 1–12 are the highest-risk signup period for fraud.
+- Days 1–12 are the highest-risk signup period for fraud.
 
-A sharp structural drop after Day 12 indicates reduced fraud probability for later signups.
+- A sharp structural drop after Day 12 indicates reduced fraud probability for later signups.
 
-Fraud activity stabilizes at lower levels from mid-month onward, forming a baseline risk.
+- Fraud activity stabilizes at lower levels from mid-month onward, forming a baseline risk.
 
-Early-month spikes likely align with promotions, campaigns, or billing-cycle abuse.
+- Early-month spikes likely align with promotions, campaigns, or billing-cycle abuse.
 
-Stricter signup verification and monitoring should be applied during the first 10–12 days of the month.
+- Stricter signup verification and monitoring should be applied during the first 10–12 days of the month.
 
 ![Fraud By Day](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_day.jpg)
 
 **4. Purchase Value Analysis**
 
-The chart shows the relationship between purchase value and fraud rate, highlighting a strong concentration of fraud in low-value transactions. Fraud rises sharply from very small amounts and peaks in the ₹10–₹40 range, after which it steadily declines as purchase value increases.
+The relationship between purchase value and fraud rate, highlights a strong concentration of fraud in low-value transactions. Fraud rises sharply from very small amounts and peaks in the *AED 10–AED 40* range, after which it steadily declines as purchase value increases.
 
-Beyond a purchase value of ~₹50, fraud drops significantly, and transactions above ₹90–₹100 show near-zero fraud activity. This pattern indicates that fraudsters primarily use low-value “testing” transactions rather than attempting high-value purchases.
+Beyond a purchase value of ~AED 50, fraud drops significantly, and transactions above ₹90–₹100 show near-zero fraud activity. This pattern indicates that fraudsters primarily use low-value “testing” transactions rather than attempting high-value purchases.
 
 Key Insights (Points):
 
-~65–70% of total fraud occurs in purchases below ₹50, making this the highest-risk value band.
+~65–70% of total fraud occurs in purchases below AED 50, making this the highest-risk value band.
 
-Fraud peaks around the ₹20–₹30 range, contributing roughly 25–30% of overall fraud volume.
+Fraud peaks around the ₹20–₹30 range, contributing roughly **25–30%** of overall fraud volume.
 
 Transactions above ₹70 account for <10% of fraud, despite contributing meaningful revenue.
 
-High-value purchases (>₹100) show negligible fraud (<1–2%).
+High-value purchases (>AED 100) show negligible fraud (<1–2%).
 
 Implementing stricter checks and limits for low-value, early-stage transactions can significantly reduce fraud without impacting genuine high-value customers.
 
