@@ -3,12 +3,15 @@
 ---
 ##  Table of Contents
 - [Project Background](#project-background)
-- [Dataset Overview](#dataset-overview)
 - [Business Objective](#business-objective)
-- [Initial Checks & Metrics](#initial-checks--metrics)
+- [Dataset Overview](#dataset-overview)
+- [Initial Checks & Data Preparation](#initial-checks--data-preparation)
 - [Executive Summary](#executive-summary)
-- [Deep Dive Insights](#deep-dive-insights)
-- [KPI, Insights & Recommendations](#kpi-insights--recommendations)
+- [Key Analysis & Insights](#key-analysis--insights)
+- [High-Risk Customer Profile](#high-risk-customer-profile)
+- [Business Recommendations](#business-recommendations)
+- [KPIs to Track](#kpis-to-track)
+- [Conclusion](#conclusion)
 ---
 <br/>
 
@@ -103,15 +106,15 @@ Further segmentation identifies low-value transactions (below 50) as the primary
 
 - Legit: 574 | Fraud: 7,630
 
-Fraud probability starts dropping from Day 2
+- Fraud probability starts dropping from Day 2
 
-A 12-day high-risk window exists post-signup
+- A 12-day high-risk window exists post-signup
 
-Fraud declines significantly after 4 months
+- Fraud declines significantly after 4 months
 
 Insight: Immediate post-signup activity is the strongest fraud indicator.
 
-Image:
+![Fraud Timing](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_datediff.jpg)
 
 **2. Purchase Value Analysis**
 
@@ -120,12 +123,14 @@ Fraud is concentrated in low-value “testing” transactions
 Fraud risk increases sharply for purchase values below 50
 
 High-value transactions show comparatively lower fraud incidence
+![Purchase Value Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_pv.jpg)
 
 **3. Age Group Analysis**
 
 31–35 age group shows disproportionately high fraud
 
 Potential drivers include fake or manipulated profiles
+![Age Group Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_age.jpg)
 
 **4. Acquisition Source Analysis**
 
@@ -135,6 +140,8 @@ SEO shows faster signup-to-purchase fraud behavior
 
 Indicates overspending on low-quality acquisition traffic
 
+![Acquisition Source Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/datediff_by_source.jpg)
+
 **5. Gender Analysis**
 
 | Gender | Transactions | Fraud Cases |
@@ -143,6 +150,8 @@ Indicates overspending on low-quality acquisition traffic
 | Male   | 79,859       | 8,434       |
 
 Fraud differences are partly driven by volume; gender alone is not a primary fraud driver.
+
+![Gender Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_gender.jpg)
 
 **6. Seasonality**
 
