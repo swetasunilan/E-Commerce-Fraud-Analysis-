@@ -120,6 +120,7 @@ From February onwards, fraud shows a mild rise during April–July, followed by 
 - Fraud prevention efforts should be intensified before and during January, especially for new users and promo-driven traffic.
   
 ![Fraud By Month](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_month.jpg)
+--- 
 
 ### **2. Fraud Timing (Signup → Purchase)**
 
@@ -140,6 +141,7 @@ This steep fall-off highlights that fraudsters act immediately after account cre
 - Implementing stricter checks for same-day purchases (rate limits, step-up verification) can address the majority of fraud with minimal impact on genuine users.
 
 ![Fraud Timing](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_datediff.jpg)
+---
 
 ### **3. Fraud By Day**
 
@@ -160,6 +162,7 @@ After Day 12, fraud drops sharply to nearly one-third of the earlier levels and 
 - Stricter signup verification and monitoring should be applied during the first 10–12 days of the month.
 
 ![Fraud By Day](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_day.jpg)
+---
 
 ### **4. Purchase Value Analysis**
 
@@ -180,6 +183,7 @@ Beyond a purchase value of ~AED 50, fraud drops significantly, and transactions 
 - Implementing stricter checks and limits for low-value, early-stage transactions can significantly reduce fraud without impacting genuine high-value customers.
   
 ![Purchase Value Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_pv.jpg)
+---
 
 ### **5. Fraud By Source**
 
@@ -200,6 +204,7 @@ While Ads and SEO track closely, SEO shows slightly higher fraud counts than Ads
 - Stricter fraud checks should be applied to Ads and SEO traffic during high-campaign months.
   
 ![Fraud By Source](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_source.jpg)
+---
 
 ### **6. Acquisition Source Analysis**
 
@@ -220,6 +225,7 @@ In percentage terms, fraudulent activity is more concentrated in faster conversi
 - Implement source-based risk rules with stricter checks for SEO and Ads during early conversion windows.
 
 ![Acquisition Source Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/datediff_by_source.jpg)
+---
 
 ### **7. Age Group Analysis**
 
@@ -238,8 +244,9 @@ Fraud volume follows a similar pattern but is disproportionately higher in the 3
 - Fraud rate drops significantly after age 40, indicating lower risk among older customers.
 
 - Age should be used as a weighted risk factor, especially when combined with source, purchase value (< AED 50), and fast signup-to-purchase behavior.
-- 
+  
 ![Age Group Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_age.jpg)
+---
 
 ### **8. Gender Analysis**
 
@@ -263,6 +270,7 @@ Fraud rates are fairly comparable across genders. Female users have a fraud rate
 - Gender data should be treated as a supporting feature, not a primary fraud rule.
 
 ![Gender Analysis](https://github.com/swetasunilan/E-Commerce-Fraud-Analysis/blob/main/Data%20Visualization/fraud_by_gender.jpg) 
+---
 
 ### **9. Fraud By Shipping City**
 
@@ -303,6 +311,9 @@ Most Fraud-Prone Segment Identified:
 
 - Purchase value: < AED 50
 
+---
+<br/>
+
 ## **Recommendations**
 
 **Tools Used: SQL, Tableau**
@@ -329,6 +340,9 @@ Finally, fraud mitigation should be risk-weighted, not demographic-blocked. Indi
 
 - Route only high-risk transactions through friction (OTP, ID verification), keeping low-risk users frictionless.
 
+---
+<br/>
+
 ## **KPIs to Track**
 
 - Fraudulent transaction percentage.
@@ -343,13 +357,19 @@ Finally, fraud mitigation should be risk-weighted, not demographic-blocked. Indi
 
 - Revenue vs fraud loss by channel.
 
+---
+<br/>
+
 ## **Expected Impact**
 
 * **2–4 weeks:** Immediate reduction in same-day and low-value fraud after enabling early-lifecycle rules and rate limits.
 * **6–8 weeks:** Noticeable drop in overall fraud rate as Ads/SEO optimizations and source-based controls take effect.
 * **3–4 months:** Stabilization of fraud closer to **UAE benchmarks (2–3%)**, with improved marketing ROI and cleaner acquisition traffic.
 * **6–12 months:** Sustained improvement through seasonal playbooks and continuous risk-score tuning.
-  
+
+---
+<br/>
+
 ## **Caveats**
 
 * Over-restricting early purchases may **impact genuine first-time conversions** if friction is applied too broadly.
@@ -357,6 +377,4 @@ Finally, fraud mitigation should be risk-weighted, not demographic-blocked. Indi
 * Fraud patterns evolve—rules must be **reviewed monthly**, especially around promotions.
 * Data quality (age, gender, city accuracy) can affect decisions; **verification and monitoring** are essential.
 * Marketing teams must align with risk controls to avoid **ROI loss from over-filtering traffic**.
-  
-
-
+---  
